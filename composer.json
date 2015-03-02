@@ -13,8 +13,7 @@
     "mandrill/mandrill": "1.0.*"
   },
   "autoload": {
-    "psr-4": {
-      "Mandrill": "src/darknd/mandrill/"
+    "psr-4": {"Mandrill\\": "src/darknd/"
+    }
     }
   }
-}
