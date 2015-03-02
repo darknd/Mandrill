@@ -8,7 +8,7 @@ class MailHandler {
     const CONTENT_TYPE_HTML = 'html';
     const CONTENT_TYPE_TEXT = 'text';
 
-    private $apiKey = 'API_KEY';
+    private $apiKey = '';
     private $_contentText = null;
     private $_contentHtml = null;
     private $_subject = null;
@@ -16,8 +16,9 @@ class MailHandler {
     private $_fromName = null;
     private $_to = array();
 
-    public function __construct(){
-
+    public function __construct($apiKey)
+    {
+        $this->apiKey = $apiKey;
     }
 
     public function setContent($content, $type)
