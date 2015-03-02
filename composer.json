@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Mandrill": "src/Darknd/Mandrill"
+      "Mandrill": "src/darknd/mandrill/"
     }
   }
 }
