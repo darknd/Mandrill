@@ -2,6 +2,7 @@
 
 use Mandrill;
 
+namespace Darknd\Mandrill;
 
 class MailHandler {
 
