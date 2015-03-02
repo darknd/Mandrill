@@ -20,28 +20,40 @@ class MailHandler {
 
     }
 
-    public function setContent($content, $type){
+    public function setContent($content, $type)
+    {
         if ($type == self::CONTENT_TYPE_HTML)
+        {
             $this->_contentHtml = $content;
+        }
+
         if ($type == self::CONTENT_TYPE_TEXT)
+        {
             $this->_contentText = $content;
+        }
     }
 
-    public function setSubject($subject){
+    public function setSubject($subject)
+    {
         $this->_subject = $subject;
     }
 
-    public function setFrom($email, $name=null){
+    public function setFrom($email, $name=null)
+    {
         $this->_from = $email;
         if (!is_null($name))
+        {
             $this->_fromName = $name;
+        }
     }
 
-    public function addCC($email, $name = null){
+    public function addCC($email, $name = null)
+    {
         $this->_to[] = ['email' => $email, 'name'=> $name,'type' => 'cc'];
     }
 
-    public function addBCC($email, $name = null){
+    public function addBCC($email, $name = null)
+    {
         $this->_to[] = ['email' => $email, 'name'=> $name,'type' => 'bcc'];
     }
 
