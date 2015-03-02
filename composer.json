@@ -1,0 +1,15 @@
+{
+  "name": "darknd/Mandrill",
+  "description": "Mandrill API",
+  "authors": [
+    {
+      "name": "Francisco Javier Afonso Pérez",
+      "email": "paco.afonso.perez@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Mandrill": "src/Darknd/Mandrill"
+    }
+  }
+}
