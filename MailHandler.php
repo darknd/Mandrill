@@ -1,8 +1,6 @@
 <?php
 
-namespace It64\Vega\Plugin;
-
-use Mandrill;
+namespace Darknd\Mandrill;
 
 
 class MailHandler {
