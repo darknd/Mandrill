@@ -17,7 +17,7 @@ class MailHandler {
     private $_to = array();
 
     public function __construct($apiKey){
-        $this->_apiKey = $apiKey;
+        $this->apiKey = $apiKey;
     }
 
     public function setContent($content, $type){
