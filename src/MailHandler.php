@@ -2,6 +2,7 @@
 
 namespace Darknd\Mandrill;
 
+use Mandrill;
 
 class MailHandler {
 
@@ -64,7 +65,7 @@ class MailHandler {
             $message['html'] = $this->_contentHtml;
         }
 
-        return print_r($mandrill->messages->send($message));
+        $mandrill->messages->send($message);
     }
 
 }
