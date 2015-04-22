@@ -2,6 +2,7 @@
 
 namespace Darknd\Mandrill;
 
+use It64\Vega\Helper\S3Helper;
 use Mandrill;
 
 class MailHandler {
@@ -15,11 +16,20 @@ class MailHandler {
     private $_subject = null;
     private $_from = null;
     private $_fromName = null;
+    private $_attachment = array();
     private $_to = array();
 
     public function __construct($apiKey){
         $this->apiKey = $apiKey;
     }
+
+    public function setAttachment($type, $name, $attachment=null)
+    {
+        $this->_attachment[] = ['type' => $type,
+            'name' => $name,
+            'content' => base64_encode($attachment)];
+    }
+
 
     public function setContent($content, $type){
         if ($type == self::CONTENT_TYPE_HTML)
@@ -54,6 +64,10 @@ class MailHandler {
             'from_email' => $this->_from,
             'from_name' => $this->_fromName,
             'to' => $this->_to);
+
+        if (!is_null($this->_attachment)){
+            $message['attachments'] = $this->_attachment;
+        }
 
         if (!is_null($this->_contentText))
         {
