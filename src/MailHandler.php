@@ -2,7 +2,6 @@
 
 namespace Darknd\Mandrill;
 
-use It64\Vega\Helper\S3Helper;
 use Mandrill;
 
 class MailHandler {
